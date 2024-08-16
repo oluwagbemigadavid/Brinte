@@ -142,6 +142,12 @@ const Select = ({
         aria-expanded={isOpen}
         aria-labelledby={`${name}-label`}
         disabled={disabled}
+        tabIndex={0}
+        onFocus={() => {
+          if (!isOpen) {
+            setFocusedIndex(-1);
+          }
+        }}
       >
         
         <div className={clsx(
@@ -165,6 +171,7 @@ const Select = ({
           ref={optionsRef}
           className="select__options"
           role="listbox"
+          tabIndex={1}
           aria-activedescendant={focusedIndex >= 0 ? `${name}-option-${focusedIndex}` : undefined}
         >
           {options.map((option, index) => (

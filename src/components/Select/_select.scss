@@ -1,6 +1,13 @@
 .select {
     position: relative;
     width: 320px;
+    border-radius: 6px;
+
+    &:focus-within {
+      background: $surface-bg-invert;
+      border: 1.5px solid $surface-primary;
+      outline: 4px solid $surface-primary-shadow;
+    }
   
     &__input {
       position: relative;
@@ -14,6 +21,11 @@
       border: 1.5px solid transparent;
       outline: 4px solid transparent;
       cursor: pointer;
+      &:focus-within {
+        background: $surface-bg-invert;
+        border: 1.5px solid $surface-primary;
+        outline: 4px solid $surface-primary-shadow;
+      }
   
       &--filled {
           align-items: flex-end;
@@ -111,6 +123,9 @@
       }
   
       &--selected {
+        background: $surface-tertiary-hover;
+      }
+      &--focused {
         background: $surface-tertiary-hover;
       }
     }

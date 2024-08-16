@@ -94,10 +94,9 @@ const ContactForm = ({
             validationText={errors.url}
           />
           <Select
-            label="Cloud Provider"
+            label="How did you find us?"
             options={contactSelectOptions}
             value={formData.provider}
-            placeholder="Choose a cloud provider"
             onChange={handleChange}
             name="cloudProvider"
             hasError={!!errors.provider}

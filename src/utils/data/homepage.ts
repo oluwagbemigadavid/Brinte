@@ -25,10 +25,9 @@ export const cards: HomepagCardType[] = [
 
 
 export const contactSelectOptions: ContactSelectOptions[] = [
-    { value: 'aws', label: 'AWS' },
-    { value: 'azure', label: 'Azure' },
-    { value: 'google_cloud', label: 'Google Cloud' },
-    { value: 'render', label: 'Render' },
-    { value: 'vercel', label: 'Vercel' },
+    { value: 'search engine', label: 'Search engine' },
+    { value: 'recommendation', label: 'Recommended by friend or colleague' },
+    { value: 'social media', label: 'Social media' },
+    { value: 'blog or publication', label: 'Blog or publication' },
     { value: 'others', label: 'Others' },
   ];

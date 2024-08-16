@@ -96,7 +96,7 @@
       @include display-flex(flex-start, flex-start, column);
       gap: 2px;
       list-style: none;
-      z-index: 10;
+      z-index: 10;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
   
     &__option {

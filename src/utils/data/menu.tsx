@@ -1,5 +1,5 @@
 import { LinkedInIcon, SlackIcon, xIcon, YoutubeIcon } from "../../assets";
-import { HOMEPAGE } from "../../pages";
+import { CONTACTPAGE } from "../../pages";
 import { FooterLinkType, MenuLinkType, RouteConfigType } from "../types";
 
 export const menuLinks : MenuLinkType[] = [
@@ -31,11 +31,11 @@ export const menuLinks : MenuLinkType[] = [
 
 
 export const menuRoutes: RouteConfigType[] = [
-   { path: '/', component: HOMEPAGE, title: 'Home' },
-   { path: '/', component: HOMEPAGE, title: 'Home' },
-   { path: '/', component: HOMEPAGE, title: 'Home' },
-   { path: '/', component: HOMEPAGE, title: 'Home' },
-   { path: '/', component: HOMEPAGE, title: 'Home' },
+   { path: '/', component: CONTACTPAGE, title: 'Home' },
+   { path: '/', component: CONTACTPAGE, title: 'Home' },
+   { path: '/', component: CONTACTPAGE, title: 'Home' },
+   { path: '/', component: CONTACTPAGE, title: 'Home' },
+   { path: '/', component: CONTACTPAGE, title: 'Home' },
  ];
 
 export const footerLinks: FooterLinkType[] = [

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { HomePageContactForm } from '.';
+import {  ContactForm } from '.';
 import { SuccessIllustration } from '../../assets';
 import { checkEmptyString } from '../../helpers';
 import { ContactFormDataType, ContactFromErrorsType } from '../../utils';
 
-const HomePageHero = () => {
+const ContactPageHero = () => {
   const [loading, setLoading] = useState(false);
   const [APIResponse, setAPIResponse] = useState<{status: String} | null>(null)
   const [formData, setFormData] = useState<ContactFormDataType>({
@@ -89,7 +89,7 @@ const HomePageHero = () => {
             <SuccessIllustration />
           </div>
         ) : (
-          <HomePageContactForm 
+          <ContactForm 
             formData={formData}
             handleSubmit={handleFormSubmit}
             loading={loading}
@@ -103,4 +103,4 @@ const HomePageHero = () => {
   );
 };
 
-export default HomePageHero;
+export default ContactPageHero;

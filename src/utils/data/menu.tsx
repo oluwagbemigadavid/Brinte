@@ -31,11 +31,11 @@ export const menuLinks : MenuLinkType[] = [
 
 
 export const menuRoutes: RouteConfigType[] = [
-   { path: '/', component: CONTACTPAGE, title: 'Home' },
-   { path: '/', component: CONTACTPAGE, title: 'Home' },
-   { path: '/', component: CONTACTPAGE, title: 'Home' },
-   { path: '/', component: CONTACTPAGE, title: 'Home' },
-   { path: '/', component: CONTACTPAGE, title: 'Home' },
+   { path: '/', component: CONTACTPAGE, title: 'Contact' },
+   { path: '/', component: CONTACTPAGE, title: 'Contact' },
+   { path: '/', component: CONTACTPAGE, title: 'Contact' },
+   { path: '/', component: CONTACTPAGE, title: 'Contact' },
+   { path: '/', component: CONTACTPAGE, title: 'Contact' },
  ];
 
 export const footerLinks: FooterLinkType[] = [

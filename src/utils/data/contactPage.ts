@@ -1,7 +1,7 @@
 import { ClosedBookIcon, OpenBookIcon, SlackIcon } from "../../assets";
-import { ContactSelectOptions, HomepagCardType } from "../types";
+import { ContactSelectOptions, ContactpagCardType } from "../types";
 
-export const cards: HomepagCardType[] = [
+export const cards: ContactpagCardType[] = [
     {
         title: 'Brinte docs',
         subTitle: 'See Brinte docs',

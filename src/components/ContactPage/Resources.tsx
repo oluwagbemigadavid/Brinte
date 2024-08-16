@@ -1,20 +1,20 @@
 import React from 'react'
 import { TopRightArrowIcon } from '../../assets'
-import { cards, HomepagCardType } from '../../utils'
+import { cards, ContactpagCardType } from '../../utils'
 
-const HomePageResources = () => {
+const ContactPageResources = () => {
   return (
-    <div className="home-resources">
+    <div className="contact-resources">
         <div className="container">
-            <div className="home-resources__info">
+            <div className="contact-resources__info">
                 <h3>Helpful resources</h3>
                 <p className="desktop-p3">
                 Find helpful tools, tips, and materials from our community, help center, and docs.
                 </p>
             </div>
-            <div className="home-resources__cards">
-                 {cards.map((item: HomepagCardType, idx: number) => (
-                  <div className="home-resources__cards__card" key={idx}>
+            <div className="contact-resources__cards">
+                 {cards.map((item: ContactpagCardType, idx: number) => (
+                  <div className="contact-resources__cards__card" key={idx}>
                     <div>
                       <item.icon />
                       <p className="desktop-p4">
@@ -31,4 +31,4 @@ const HomePageResources = () => {
   )
 }
 
-export default HomePageResources
+export default ContactPageResources

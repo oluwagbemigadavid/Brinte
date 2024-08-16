@@ -141,6 +141,11 @@
     }
   
     &--error {
+
+      &:focus-within {
+        border: 1.5px solid transparent;
+        outline: 4px solid transparent;
+      }
       .select__input {
         background: $surface-bg-invert;
         border: 1.5px solid $surface-critical !important;

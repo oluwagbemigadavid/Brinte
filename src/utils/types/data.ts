@@ -10,7 +10,7 @@ export interface RouteConfigType {
     title?: string;
 }
 
-export interface HomepagCardType {
+export interface ContactpagCardType {
     title: string;
     icon: any;
     subTitle: string;

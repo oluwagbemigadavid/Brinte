@@ -70,6 +70,7 @@ const ContactForm = ({
             label='Email'
             placeholder='example@email.com'
             name='email'
+            type='email'
             value={formData.email}
             onChange={handleFormData}
             hasError={!!errors.email}

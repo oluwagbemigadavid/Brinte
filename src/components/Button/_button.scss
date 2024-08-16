@@ -1,0 +1,79 @@
+.button {
+    color: $text-label;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background: transparent;
+
+    &--primary {
+        color: $text-primary;
+        background: $surface-primary;
+        
+        &:hover {
+            background: $surface-primary-hover;
+        }
+        &:active {
+            background: $surface-primary;
+        }
+        &:focus {
+            background: $surface-primary;
+            outline: 4px solid $surface-primary-shadow;
+        }
+    }
+
+    &--secondary {
+        color: $text-neutral;
+        background: $surface-secondary;
+
+        &:hover {
+            background: $surface-secondary-hover;
+        }
+        &:active {
+            background: $surface-secondary;
+        }
+        &:focus {
+            outline: 4px solid $surface-tertiary-pressed;
+        }
+    }
+
+    &--tertiary {
+        &:hover {
+            background: $surface-tertiary-hover;
+        }
+        &:active {
+            background: $surface-tertiary-pressed;
+        }
+        &:focus {
+            color: $text-label;
+            background: $surface-subdue;
+        }
+    }
+
+    &--loading {
+        @include display-flex(flex-start, center);
+        gap: 8px;
+        svg {
+            width: 13.33px;
+            height: 13.33px;
+        }
+        &:focus {
+            background: transparent;
+            outline: 4px solid transparent;
+        }
+    }
+
+    &--disabled {
+        pointer-events: none;
+    }
+
+    &--primary.button--disabled, &--secondary.button--disabled {
+        color: $text-subdued;
+        background: $surface-subdue;
+    }
+
+    &--tertiary.button--disabled {
+        color: $text-subdued;
+    }
+}

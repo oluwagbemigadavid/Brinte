@@ -1,0 +1,9 @@
+export { ReactComponent as OpenBookIcon } from './open-book.svg';
+export { ReactComponent as ClosedBookIcon } from './closed-book.svg';
+export { ReactComponent as TopRightArrowIcon } from './top-right-arrow.svg';
+export { ReactComponent as SlackIcon } from './slack.svg';
+export { ReactComponent as YoutubeIcon } from './youtubeIcon.svg';
+export { ReactComponent as xIcon } from './xIcon.svg';
+export { ReactComponent as LoaderIcon } from './loader.svg';
+export { ReactComponent as AngleDownIcon } from './angle-down.svg';
+export { ReactComponent as LinkedInIcon } from './linkedinIcon.svg';

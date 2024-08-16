@@ -1,0 +1,161 @@
+.nav {
+    height: 64px;
+    width: 100vw;                       
+    position: fixed;
+    z-index: 100;
+    background: $surface-bg-invert;
+    border-bottom: 1px solid transparent;
+    &--scrolled {
+        border-bottom: 1px solid $surface-tertiary-pressed;
+    }
+    .container {
+        left: auto;
+        right: auto;
+        top: 0;
+        width: 100%;
+        max-width: 1440px;
+        height: 100%;
+        padding: 12px 64px;
+        margin: 0 auto;
+        @include display-flex(space-between, center);
+        @include respond(tablet) {
+            width: 100%;
+            padding: 12px 32px;
+        }
+        @include respond(phone) {
+            padding: 12px 16px;
+        }
+
+    }
+    &__logo {
+        @include display-flex(space-between, center);
+        gap: 4px;
+        span {
+            width: 36px;
+            height: 20px;
+            border-radius: 24px;
+            padding: 5px 8px;
+            background: $surface-info-invert;
+            color: $text-info;
+            @include display-flex(center, center);
+        }
+    }
+    &__links {
+        @include display-flex(center, center);
+        gap: 4px;
+
+        @include respond(tablet) {
+            padding-top: 40px;
+            position: absolute;
+            top: 64px;
+            width: 100vw;
+            left: -100vw;
+            opacity: 0;
+            pointer-events: none;
+            height: calc(100vh - 64px);
+            background: $surface-bg-invert;
+            border-top: 1px solid $surface-tertiary-pressed;
+            flex-direction: column;
+            gap: 24px;
+            justify-content: flex-start;
+            transition: all 0.3s ease-in;
+        }
+        &__mobile {
+          pointer-events: all;
+          left: 0;
+          opacity: 1;
+          transition: all 0.3s ease-in;
+        }
+        &__link {
+            padding: 5px 12px;
+            @include respond(tablet) {
+                width: 100%;
+                text-align: center;
+                padding: 16px 12px
+            } 
+        }
+        &__cta {
+            display: none !important;
+            @include respond(tablet) {
+                margin-top: 24px;
+                display: flex !important;
+            }
+        }
+    }
+    &__cta {
+        @include display-flex(center, center);
+        gap: 12px;
+        @include respond(tablet) {
+            display: none;
+        }
+
+    }
+
+    
+label{
+     display: none;
+     flex-direction:column;
+     width:32px;
+     cursor:pointer;
+     @include respond(tablet) {
+         display: flex;
+         margin-right: 8px;;
+     }
+   }
+   
+   label span{
+     background: $surface-secondary;
+     border-radius:6px;
+     height: 4px;
+     margin: 2px 0;
+     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   }
+   
+   
+   span:nth-of-type(1){
+     width:50%;
+     
+   }
+   
+   span:nth-of-type(2){
+     width:100%;
+   }
+   
+   
+   span:nth-of-type(3){
+     width:75%;
+    
+   }
+   
+   
+   input[type="checkbox"]{
+     display:none;
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(1){
+     transform-origin:bottom;
+     transform:rotatez(45deg) translate(3px,-2px)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(2){
+     
+     transform-origin:top;
+     transform:rotatez(-45deg)
+   }
+   
+   
+   input[type="checkbox"]:checked ~ span:nth-of-type(3){
+     
+     transform-origin:bottom;
+     width:55%;
+     transform: translate(14px,-4px) rotatez(45deg);
+   
+   }
+
+   input[type="checkbox"]:checked ~ .nav__links .nav__links__link {
+    background: red !important;
+  }
+   
+}

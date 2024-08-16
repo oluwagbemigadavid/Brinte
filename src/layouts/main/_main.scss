@@ -1,0 +1,8 @@
+.main {
+    font-family: 'PP Telegraf';
+    position: relative;
+    background: $surface-bg-invert;
+    &__contents {
+        padding-top: 64px;
+    }
+}

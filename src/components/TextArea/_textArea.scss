@@ -1,0 +1,88 @@
+.textarea {
+    position: relative;
+    width: 320px;
+
+   &__input {
+    position: relative;
+    border-radius: 6px;
+    padding: 2px;
+    background: $surface-tertiary-hover;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent;
+    outline: 4px solid transparent;     
+
+    &:focus-within {
+        background: $surface-bg-invert;
+        border: 1.5px solid $surface-primary;
+        outline: 4px solid $surface-primary-shadow;
+    } 
+    textarea {
+        width: 100%;
+        height: 134px;
+        border: none;
+        background: none;
+        outline: none;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 12px 0 0 12px;
+        color: $surface-secondary;
+        resize: vertical;
+
+        &::placeholder {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 20px;
+            color: $text-subdued;
+        }
+
+        &:hover {
+            &::Placeholder {
+                color: $text-secondary;
+            }
+        }
+    }
+    
+    
+   }
+
+   &__footer {
+    width: 100%;
+    @include display-flex(flex-end, center);
+
+    & p:last-child {
+        text-align: right;
+    }
+    .textarea__message {
+        text-align: left !important;
+    }
+   }
+
+    p {
+        width: 100%;
+        padding-top: 8px;
+        font-weight: 400;
+        height: 18px;
+        color: $text-secondary;
+    }
+
+    &--error {
+        .textarea__input {
+            background: $surface-bg-invert;
+            border: 1.5px solid $surface-critical !important;
+            outline: 4px solid $surface-critical-border !important; 
+        }
+        p {
+            color: $text-error;
+        }
+    }
+
+    &--disabled > * {
+        pointer-events: none;
+    }
+    &--disabled p {
+        color: $text-subdued;
+    }
+}

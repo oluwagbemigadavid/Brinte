@@ -1,0 +1,152 @@
+.select {
+    position: relative;
+    width: 320px;
+  
+    &__input {
+      position: relative;
+      width: 100%;
+      height: 56px;
+      border-radius: 6px;
+      padding: 18px 16px;
+      background: $surface-tertiary-hover;
+      @include display-flex(space-between, center);
+      transition: all 0.3s ease;
+      border: 1.5px solid transparent;
+      outline: 4px solid transparent;
+      cursor: pointer;
+  
+      &--filled {
+          align-items: flex-end;
+          padding: 10px 16px;
+    }
+    
+    &--open {
+        padding: 10px 16px;
+        align-items: flex-end;
+        background: $surface-bg-invert;
+        border: 1.5px solid $surface-primary;
+        outline: 4px solid $surface-primary-shadow;
+        .select__label {
+            top: 10px;
+            font-size: 10px;
+            line-height: 14px;
+
+        }
+        .select--placeholder {
+            opacity: 1;
+            transition: all 0.3s ease;
+
+        }
+      }
+  
+      &:hover {
+        .select__label {
+          color: $text-secondary;
+        }
+      }
+    }
+
+    &__value {
+      opacity: 1;
+      color: $surface-secondary;
+    }
+  
+    &--placeholder {
+      opacity: 0;
+      color: $surface-secondary;
+      color: $text-subdued;
+    }
+  
+    &__label {
+      position: absolute;
+      top: 18px;
+      left: 16px;
+      font-weight: 400;
+      pointer-events: none;
+      color: $text-subdued;
+      transition: all 0.3s ease;
+  
+      .select__input--filled & {
+        top: 10px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+  
+    &__arrow {
+        padding: 4px 0px;
+      transform: rotate(0deg);
+      transition: transform 0.3s ease;
+  
+      &--open {
+        transform: rotate(180deg);
+      }
+    }
+  
+    &__options {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 0;
+      right: 0;
+      background: $surface-bg-invert;
+      border: 1px solid $surface-tertiary-pressed ;
+      border-radius: 8px;
+      max-height: 500px;
+      padding: 4px;
+      @include display-flex(flex-start, flex-start, column);
+      gap: 2px;
+      list-style: none;
+      z-index: 10;
+    }
+  
+    &__option {
+      padding: 5px 8px;
+      border-radius: 6px;
+      width: 100%;
+      cursor: pointer;
+      color: $text-label;
+  
+      &:hover {
+        background: $surface-tertiary-hover;
+      }
+  
+      &--selected {
+        background: $surface-tertiary-hover;
+      }
+    }
+  
+    p {
+      width: 100%;
+      padding-top: 8px;
+      font-weight: 400;
+      height: 18px;
+      color: $text-secondary;
+    }
+  
+    &--error {
+      .select__input {
+        background: $surface-bg-invert;
+        border: 1.5px solid $surface-critical !important;
+        outline: 4px solid $surface-critical-border !important;
+      }
+      .select__value {
+        color: $text-subdued;
+      }
+      p {
+        color: $text-error !important;
+      }
+    }
+  
+
+    &--disabled > * {
+        pointer-events: none;
+    }
+    &--disabled p {
+        color: $text-subdued;
+    }
+    &--disabled {
+        .select__arrow svg path{
+            stroke: $text-subdued;
+        }
+    }
+  }

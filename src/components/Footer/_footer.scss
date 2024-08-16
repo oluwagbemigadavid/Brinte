@@ -1,0 +1,104 @@
+.footer {
+    background: $surface-overlay;
+    padding: 120px 0 0;
+    @include respond(tablet) {
+        padding-top: 80px ;
+    }
+    .container {
+        width: 822px;
+        padding-bottom: 40px;
+        @include respond(tablet) {
+            width: 100%;
+            padding-bottom: 40px;
+        }
+    }
+    &__contents {
+        @include display-flex(space-between, flex-start);
+        @include respond(tablet) {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        &__logo {
+            width: 40px;
+            height: 40px;
+            cursor: pointer
+        }
+
+        &__links {
+            @include display-flex(flex-start, flex-start);
+            gap: 32px;
+            @include respond(tablet) {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 24px;
+            }
+            @include respond(phone) {
+                justify-content: flex-start;
+            }
+        }
+    }
+    &__links {
+        width: 139px;
+        @include display-flex(flex-start, flex-start, column);
+        gap: 24px;
+        @include respond(tablet) {
+            width: 120px;
+        }
+        p {
+            color: $text-subdued;
+        }
+
+        &__link {
+            width: 100%;
+            @include display-flex(flex-start, center);
+            gap: 12px;
+            svg {
+                width: 13.33px;
+                height: 13.33px;
+            }
+            a {
+                width: 100%;
+            }
+        }
+    }
+    &__divider {
+        width: 100%;
+        margin: 32px 0;
+        border: 1px solid $surface-tertiary-pressed;
+        @include respond(tablet) {
+            margin-top: 60px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__footnote {
+        @include display-flex(space-between, flex-start);
+        span {
+            margin-right: auto;
+            margin-left: 8px;
+        }
+        p {
+            color: $text-secondary
+        }
+    }
+
+    &__underlay {
+        width: 100%;
+        @include display-flex(center, flex-end);
+        @include respond(tablet) {
+            overflow: hidden;
+        }
+        svg {
+            width: Min(94%, 1328px);
+            @include respond(tablet) {
+                height: fit-content;
+                width: Min(90%, 1328px);
+            }
+            @include respond(phone) {
+                width: Min(90%, 1328px);
+            }
+        }
+    }
+}

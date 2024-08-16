@@ -1,0 +1,16 @@
+@mixin font-face($family, $weight, $fileName, $extension, $format, $style: normal) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src: local($family), url('../assets/fonts/#{$fileName}.#{$extension}') format($format);
+    font-display: swap;
+  }
+}
+
+@mixin display-flex($justify: space-between, $align: center, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

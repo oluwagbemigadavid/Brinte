@@ -1,0 +1,78 @@
+@include font-face(PP Telegraf, 400, PPTelegraf-Regular-BF6417cecb5d571, otf, truetype);
+@include font-face(PP Telegraf, 500, PPTelegraf-Ultrabold-BF6417cecc5b1d9, otf, truetype);
+
+h1 {
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -1.25px;
+    @include respond(tablet) {
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 64px;
+        letter-spacing: -1px;
+    }
+}
+h3 {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: -1px;
+    @include respond(tablet) {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+    }
+}
+
+h5 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.chip {
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+}
+.desktop-medium {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+.desktop-p2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+.desktop-p3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.desktop-p4 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+.desktop-p5 {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+}
+.desktop-p5-regular {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+.desktop-cap-medium {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+}
+.desktop-cap-regular {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+}

@@ -1,0 +1,108 @@
+.textfield {
+    position: relative;
+    width: 320px;
+
+   &__input {
+    position: relative;
+    height: 56px;
+    border-radius: 6px;
+    padding: 18px 16px;
+    background: $surface-tertiary-hover;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent;
+    outline: 4px solid transparent;
+
+    &--filled {
+        padding: 10px 16px;
+    }
+
+    &:hover {
+        .label {
+            color: $text-secondary;
+        }
+    }
+    
+    &:focus-within {
+        padding: 10px 16px;
+        background: $surface-bg-invert;
+        border: 1.5px solid $surface-primary;
+        outline: 4px solid $surface-primary-shadow;
+    }
+
+    .label {
+        position: absolute;
+        top: 18px;
+        left: 16px;
+        font-weight: 400;
+        pointer-events: none;
+        color: $text-subdued;
+        transition: all 0.3s ease;
+    }
+    
+    input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border: none;
+        background: none;
+        left: 0;
+        top: 0;
+        outline: none;
+        font-size: 16px;
+        color: $surface-secondary;
+
+        &::placeholder {
+            font-size: 16px;
+            color: $text-subdued;
+        }
+        
+        &:focus {
+            height: 20px; 
+            position: relative;
+        }
+        
+        &:focus,
+        &:not(:placeholder-shown) {
+            & + .label {
+                top: 10px; 
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+        &:not(:placeholder-shown) {
+            height: 20px; 
+            position: relative;
+        }
+    }
+    
+    
+   }
+
+    p {
+        width: 100%;
+        padding-top: 8px;
+        font-weight: 400;
+        height: 18px;
+        color: $text-secondary;
+    }
+
+    &--error {
+        .textfield__input {
+            background: $surface-bg-invert;
+            border: 1.5px solid $surface-critical !important;
+            outline: 4px solid $surface-critical-border !important; 
+        }
+        p {
+            color: $text-error !important;
+        }
+    }
+
+    &--disabled > * {
+        pointer-events: none;
+    }
+    &--disabled p {
+        color: $text-subdued;
+    }
+}

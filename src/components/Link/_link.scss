@@ -1,0 +1,13 @@
+.link {
+    text-decoration: none;
+    color: $text-label;
+    &:hover {
+        color: $text-subdued;
+    }
+    &--enabled {
+        color: $text-label;
+    }
+    &:active {
+        color: $text-label;
+    }
+}
